@@ -12,7 +12,13 @@
     padding: 10px;
 }
 
-#ForcastContainer {
+#ForecastContainer {
     display: flex;
     flex-wrap: wrap;
+}
+
+.weather-card{
+    margin: 15px;
+    border: 1px black solid;
+    min-width: 200px;
 }
