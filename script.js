@@ -33,7 +33,7 @@ const DisplaySavedCities = () => {
     SavedCitiesList.innerHTML = ""
     let savedCities = JSON.parse(localStorage.getItem("savedCities")) || []
     for (let i = 0; i < savedCities.length; i++) {
-        const cityEl = document.createElement("li")
+        const cityEl = document.createElement("button")
         cityEl.textContent = savedCities[i]
         cityEl.addEventListener("click", function () {
             getWeather(savedCities[i])
