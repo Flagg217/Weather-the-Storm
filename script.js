@@ -2,6 +2,7 @@ const weatherApiKey = "f1b62f70937b6ed6809af5b162146a55"
 const SearchButton = document.querySelector("#SearchButton")
 const SearchInput = document.querySelector("#SearchInput")
 const SavedCities = document.querySelector("#SavedCities")
+const SavedCitiesList = document.querySelector("#SavedCitiesList")
 const CityName = document.querySelector("#CityName")
 const Temperature = document.querySelector("#CurrentTemp")
 const CurrentWind = document.querySelector("#CurrentWind")
@@ -25,7 +26,21 @@ const saveCity = (city) => {
     }
     savedCities.push(city)
     localStorage.setItem("savedCities", JSON.stringify(savedCities))
-    DisplaySavedCities()
+    DisplaySavedCities() 
+}
+
+const DisplaySavedCities = () => {
+    SavedCitiesList.innerHTML = ""
+    let savedCities = JSON.parse(localStorage.getItem("savedCities")) || []
+    for (let i = 0; i < savedCities.length; i++) {
+        const cityEl = document.createElement("li")
+        cityEl.textContent = savedCities[i]
+        cityEl.addEventListener("click", function () {
+            getWeather(savedCities[i])
+            getForecast(savedCities[i])
+        })
+        SavedCitiesList.append(cityEl)
+    }
 }
 
 const DisplayCurrentWeather = (data) => {
