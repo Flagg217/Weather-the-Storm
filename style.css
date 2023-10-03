@@ -7,6 +7,18 @@
     padding: 10px;
 }
 
+#SearchButton {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#SavedCitiesList {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding: 10px;
+}
+
 #WeatherArea {
     width: 80%;
     padding: 10px;
@@ -22,3 +34,4 @@
     border: 1px black solid;
     min-width: 200px;
 }
+
