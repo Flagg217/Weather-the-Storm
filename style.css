@@ -24,19 +24,43 @@
     padding: 10px;
 }
 
+#CurrentWeatherContainer {
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px black solid;
+}
+
 #ForecastContainer {
+    justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
 }
 
+.header {
+    background-color: aqua;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px black solid;
+}
+
 .weather-card {
+    background-color: aqua;
+    width: 16%;
+    justify-content: space-between;
     margin: 15px;
     border: 1px black solid;
-    min-width: 200px;
+    width: fit-content;
 }
 
 button {
     margin: 5px;
+    width: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
