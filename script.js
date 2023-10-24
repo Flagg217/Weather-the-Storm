@@ -47,7 +47,6 @@ const DisplayCurrentWeather = (data) => {
     CityName.textContent = data.name
     Temperature.textContent = "TEMP: "+data.main.temp+" F "
     WeatherIcon.src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`
-    //finish filout the current weather
     CurrentWind.textContent = "Wind Speed: "+data.wind.speed+" MPH"
     CurrentHumidity.textContent = "Humidity: "+data.main.humidity+"%"
 }
